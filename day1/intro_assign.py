@@ -112,3 +112,32 @@ factorial = generator()
 factorial_comp = [next(factorial) for i in range(10)]
 print("factorials 1-10: ", factorial_comp)
 
+"""Dictionaries, keys and values"""
+
+jam_dict = {
+    "type": "straberry",
+    "brand": "homemade",
+    "sugar": "10 g"
+}
+
+print(f'What type?: {jam_dict["type"]} What brand? {jam_dict["brand"]} How much sugar?: {jam_dict["sugar"]}')
+
+"""Functions: """
+
+def jam_slicing_function(j):
+    slicer = slice(1, 5)
+    sliced = j[slicer]
+    return sliced
+
+print("Printing sliced jam: ", jam_slicing_function(jam_tuple))
+
+"""Arguments and keyword arguments, *args & **kwargs"""
+
+def foo(required, *args, **kwargs):
+    print(required)
+    if args:
+        print(args)
+    if kwargs:
+        print(kwargs)
+
+foo('hello', 1, 2, 3, key1='value', key2=999)
