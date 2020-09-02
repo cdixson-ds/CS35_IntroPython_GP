@@ -47,3 +47,5 @@ print(len(x))
 # YOUR CODE HERE
 
 print([_*1000 for _ in x])
+
+# look into extend

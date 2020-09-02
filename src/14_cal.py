@@ -30,3 +30,33 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+"""If the user doesn't enter a date when running the .py file it will 
+default to the current date"""
+
+
+def get_calendar():
+  if len(sys.argv) == 1:
+    t = datetime.today()
+    m = t.month
+    y = t.year
+    print(calendar.month(y, m))
+  elif len(sys.argv) == 2:
+    t = datetime.today()
+    m = int(sys.argv[1])
+    y = t.year
+    print(calendar.month(y, m))
+  elif len(sys.argv) == 3:
+    m = int(sys.argv[1])
+    y = int(sys.argv[2])
+    print(calendar.month(y, m))
+    return
+  else: 
+    return "error"
+
+get_calendar()
+
+
+
+
+
